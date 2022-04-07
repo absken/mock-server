@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+
 const chalk = require('chalk');
+const mongoose = require('mongoose');
 
 // import environmental variables from our variables.env file
 require('dotenv').config();
