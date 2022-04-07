@@ -2,7 +2,7 @@ FROM node:alpine as debug
 WORKDIR /mock-server
 COPY package.json .
 COPY package-lock.json .
-RUN npm install
+RUN npm ci
 COPY . .
 EXPOSE 8090
-CMD ["npm", "run", "start-debug"]
+CMD ["npm", "run", "start"]
