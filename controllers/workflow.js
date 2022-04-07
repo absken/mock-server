@@ -1,9 +1,7 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import chalk from 'chalk';
+const express = require('express');
+const mongoose = require('mongoose');
 
-import { conf } from '../config/config';
-import { getJsonFromFile } from '../utils';
+const { conf } = require('../config/config');
 
 const Workflow = mongoose.model('Workflow');
 const router = express.Router();
@@ -98,4 +96,4 @@ async function getWorkflowsCsv(req, res) {
   }, 3000);
 }
 
-export default router;
+module.exports = router;

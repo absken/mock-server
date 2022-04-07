@@ -1,11 +1,13 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import chalk from 'chalk';
+const express = require('express');
+const bodyParser = require('body-parser');
+const chalk = require('chalk');
 
-import auth from './controllers/auth';
-import messageResource from './controllers/messageResource';
-import customer from './controllers/customer';
-import workflow from './controllers/workflow';
+const auth = require('./controllers/auth');
+const messageResource = require('./controllers/messageResource');
+const customer = require('./controllers/customer');
+const workflow = require('./controllers/workflow');
+
+
 
 const app = express();
 

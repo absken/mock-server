@@ -1,8 +1,8 @@
-import express from 'express';
-import chalk from 'chalk';
+const express = require('express');
+const chalk = require('chalk');
 
-import { conf } from '../config/config';
-import { getJsonFromFile } from '../utils';
+const { conf } = require('../config/config');
+const { getJsonFromFile } = require('../utils');
 
 const router = express.Router();
 
@@ -26,4 +26,4 @@ function getMessageResource(req, res) {
   }, 2000);
 }
 
-export default router;
+module.exports = router;

@@ -1,7 +1,7 @@
-import express from 'express';
+const express = require('express');
 
-import { conf } from '../config/config';
-import { getJsonFromFile } from '../utils';
+const { conf } = require('../config/config');
+const { getJsonFromFile } = require('../utils');
 
 const router = express.Router();
 
@@ -38,4 +38,4 @@ function extendSession(req, res) {
   }, 2000);
 }
 
-export default router;
+module.exports = router;

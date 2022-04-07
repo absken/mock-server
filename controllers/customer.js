@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 
-import { getJsonFromFile, saveJsonContent } from '../utils';
+const { getJsonFromFile, saveJsonContent } = require('../utils');
 
 const router = express.Router();
 
@@ -28,4 +28,4 @@ function deleteCustomer(req, res) {
   }, 2000);
 }
 
-export default router;
+module.exports = router;
