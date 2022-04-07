@@ -15,7 +15,9 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://as-ess.surge.sh',
   'https://d2m7htnz6n3fxp.cloudfront.net',
+  'http://d2m7htnz6n3fxp.cloudfront.net',
   'https://d10t4l0sbjyd6t.cloudfront.net',
+  'http://d10t4l0sbjyd6t.cloudfront.net',
   'https://absencesoft-reactapp.com',
 ];
 
