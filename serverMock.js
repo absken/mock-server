@@ -13,6 +13,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
+  'http://0.0.0.0:3000',
   'http://as-ess.surge.sh',
   'https://d2m7htnz6n3fxp.cloudfront.net',
   'http://d2m7htnz6n3fxp.cloudfront.net',
