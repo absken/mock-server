@@ -14,7 +14,7 @@ function getMessageResource(req, res) {
     console.log(chalk.blue('URL: "/messageResource"\n Query Params: ' + JSON.stringify(req.query)));
   }
 
-  res.setHeader('x-jwt-token', conf.auth.xJwtToken);
+  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
   setTimeout(() => {
     res.json({
       status: 'success',

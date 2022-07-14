@@ -10,7 +10,7 @@ router.post('/authenticate', authenticate);
 router.get('/extend-session', extendSession);
 
 function authenticate(req, res) {
-  res.setHeader('x-jwt-token', conf.auth.xJwtToken);
+  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
   setTimeout(() => {
     if (req.body && req.body.username === 'admin' && req.body.password === 'admin') {
       res.json({
@@ -29,7 +29,7 @@ function authenticate(req, res) {
 }
 
 function extendSession(req, res) {
-  res.setHeader('x-jwt-token', conf.auth.xJwtToken);
+  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
   setTimeout(() => {
     res.json({
       status: 'success',
