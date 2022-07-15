@@ -11,7 +11,7 @@ router.get('/', getWorkflows);
 router.get('/csv', getWorkflowsCsv);
 
 async function getWorkflows(req, res) {
-  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
+  res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
 
   const page = req.query.page || 1;
   const limit = req.query.limit || 10000;
@@ -63,7 +63,7 @@ async function getWorkflows(req, res) {
 }
 
 async function getWorkflowsCsv(req, res) {
-  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
+  res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
 
   const sort = req.query.sort && JSON.parse(req.query.sort);
   const search = req.query.search && JSON.parse(req.query.search);

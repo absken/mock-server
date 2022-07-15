@@ -10,7 +10,7 @@ router.post('/authenticate', authenticate);
 router.get('/extend-session', extendSession);
 
 function authenticate(req, res) {
-  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
+  res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
   setTimeout(() => {
     if (req.body && req.body.username === 'admin' && req.body.password === 'admin') {
       res.json({
