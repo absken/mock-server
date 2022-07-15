@@ -29,7 +29,7 @@ function authenticate(req, res) {
 }
 
 function extendSession(req, res) {
-  res.setHeader('Authorization', `Bearer ${conf.auth.xJwtToken}`);
+  res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
   setTimeout(() => {
     res.json({
       status: 'success',
