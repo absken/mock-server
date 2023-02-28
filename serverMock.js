@@ -12,6 +12,10 @@ const workflow = require('./controllers/workflow');
 const app = express();
 
 const allowedOrigins = [
+  'http://localhost:8080',
+  'http://localhost:8081',
+  'http://localhost:8082',
+  'http://localhost:8090',
   'http://localhost:3000',
   'http://0.0.0.0:3000',
   'http://as-ess.surge.sh',
