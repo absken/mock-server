@@ -12,7 +12,7 @@ router.get('/extend-session', extendSession);
 function authenticate(req, res) {
   res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
   setTimeout(() => {
-    if (req.body && req.body.username === 'admin') {
+    if (req.body && req.body.username === 'qa@absencesoft.com' && req.body.password === '!Complex001') {
       res.json({
         status: 'success',
         message: '',
@@ -22,7 +22,6 @@ function authenticate(req, res) {
       res.json({
         status: 'error',
         message: 'Oops! Your username or password is invalid.',
-        data: req.data,
       });
     }
   }, 2000);
