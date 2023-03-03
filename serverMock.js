@@ -27,7 +27,7 @@ const allowedOrigins = [
 ];
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /* eslint-disable no-console */
 app.use((req, res, next) => {
