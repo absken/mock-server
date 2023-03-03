@@ -22,7 +22,7 @@ function authenticate(req, res) {
       res.json({
         status: 'error',
         message: 'Oops! Your username or password is invalid.',
-        data: req.body,
+        data: req.data,
       });
     }
   }, 2000);
