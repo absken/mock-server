@@ -6,13 +6,13 @@ const { getJsonFromFile } = require('../utils');
 const router = express.Router();
 
 //routes
-router.post('/authenticate', authenticate);
+router.post('/login', authenticate);
 router.get('/extend-session', extendSession);
 
 function authenticate(req, res) {
   res.setHeader('Authorization', `${conf.auth.xJwtToken}`);
   setTimeout(() => {
-    if (req.body && ((req.body.username === 'admin' && req.body.password === 'admin') || (req.body.username === 'qa@absencesoft.com' && req.body.password === '!Complex001'))) {
+    if (req.body && ((req.body.username === 'admin' && req.body.password === 'admin') || (req.body.Email === 'qa@absencesoft.com' && req.body.Password === '!Complex001'))) {
       res.json({
         status: 'success',
         message: '',
